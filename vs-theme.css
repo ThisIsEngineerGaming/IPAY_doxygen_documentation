@@ -1,0 +1,541 @@
+/* ==========================================================================
+   IPAY docs - Visual Studio Dark theme for Doxygen 1.15
+   Load AFTER doxygen.css (Doxyfile: HTML_EXTRA_STYLESHEET = vs-theme.css)
+   Palette: VS 2022 "Dark" / Dark+ editor colours.
+   ========================================================================== */
+
+/* ---- 1. Palette: override every Doxygen colour variable ---------------- */
+html:root {
+  color-scheme: dark;
+
+  /* VS chrome */
+  --vs-editor: #1e1e1e;
+  --vs-panel: #252526;
+  --vs-tab-bar: #2d2d30;
+  --vs-border: #3f3f46;
+  --vs-border-soft: #333337;
+  --vs-hover: #2a2d2e;
+  --vs-select: #37373d;
+  --vs-accent: #007acc;
+  --vs-accent-light: #1b9bf0;
+  --vs-purple: #68217a;
+  --vs-text: #d4d4d4;
+  --vs-text-dim: #9d9d9d;
+
+  --page-background-color: var(--vs-editor);
+  --page-foreground-color: var(--vs-text);
+  --page-link-color: #4ec9b0;
+  --page-visited-link-color: #4ec9b0;
+  --page-external-link-color: #3794ff;
+
+  --index-odd-item-bg-color: #232325;
+  --index-even-item-bg-color: var(--vs-editor);
+  --index-header-color: #ffffff;
+  --index-separator-color: var(--vs-border);
+
+  --header-background-color: var(--vs-panel);
+  --header-separator-color: var(--vs-border);
+  --group-header-separator-color: var(--vs-border);
+  --group-header-color: #569cd6;
+  --inherit-header-color: var(--vs-text-dim);
+
+  --footer-foreground-color: #ffffff;
+  --footer-logo-width: 60px;
+  --citation-label-color: #4ec9b0;
+  --glow-color: #264f78;
+
+  --title-background-color: var(--vs-tab-bar);
+  --title-separator-color: var(--vs-border);
+  --directory-separator-color: var(--vs-border-soft);
+  --separator-color: var(--vs-border);
+
+  --blockquote-background-color: #252526;
+  --blockquote-border-color: var(--vs-accent);
+
+  --scrollbar-thumb-color: #424242;
+  --scrollbar-background-color: var(--vs-editor);
+
+  --icon-background-color: #3c3c3c;
+  --icon-foreground-color: #dcdcaa;
+  --icon-folder-open-fill-color: #dcb67a;
+  --icon-folder-fill-color: #c09553;
+  --icon-folder-border-color: #8a6a35;
+  --icon-doc-fill-color: #75beff;
+  --icon-doc-border-color: #1e1e1e;
+
+  /* brief member declarations */
+  --memdecl-background-color: #252526;
+  --memdecl-separator-color: var(--vs-border-soft);
+  --memdecl-foreground-color: var(--vs-text);
+  --memdecl-template-color: #4ec9b0;
+  --memdecl-border-color: var(--vs-border-soft);
+
+  /* detailed member docs */
+  --memdef-border-color: var(--vs-border);
+  --memdef-title-background-color: #2d2d30;
+  --memdef-proto-background-color: #252526;
+  --memdef-proto-text-color: #dcdcaa;
+  --memdef-doc-background-color: var(--vs-editor);
+  --memdef-param-name-color: #9cdcfe;
+  --memdef-template-color: #4ec9b0;
+
+  /* tables */
+  --table-cell-border-color: var(--vs-border);
+  --table-header-background-color: #2d2d30;
+  --table-header-foreground-color: #ffffff;
+
+  /* labels (static, virtual, ...) */
+  --label-background-color: #0e639c;
+  --label-left-top-border-color: #1177bb;
+  --label-right-bottom-border-color: #0b4f7c;
+  --label-foreground-color: #ffffff;
+
+  /* navigation */
+  --nav-background-color: var(--vs-panel);
+  --nav-foreground-color: var(--vs-text);
+  --nav-border-color: var(--vs-border);
+  --nav-breadcrumb-separator-color: var(--vs-border);
+  --nav-breadcrumb-active-bg: #1177bb;
+  --nav-breadcrumb-color: #ffffff;
+  --nav-breadcrumb-border-color: #0b4f7c;
+  --nav-splitbar-bg-color: var(--vs-border-soft);
+  --nav-splitbar-handle-color: var(--vs-accent);
+  --nav-font-size-level1: 13px;
+  --nav-font-size-level2: 12px;
+  --nav-font-size-level3: 12px;
+  --nav-text-normal-color: #cccccc;
+  --nav-text-hover-color: #ffffff;
+  --nav-text-active-color: #ffffff;
+  --nav-menu-button-color: #cccccc;
+  --nav-menu-background-color: var(--vs-tab-bar);
+  --nav-menu-foreground-color: #cccccc;
+  --nav-menu-active-bg: #3e3e42;
+  --nav-menu-active-color: #ffffff;
+  --nav-menu-toggle-color: rgba(255, 255, 255, 0.2);
+  --nav-arrow-color: #858585;
+  --nav-arrow-selected-color: #ffffff;
+
+  --sync-icon-border-color: var(--vs-border);
+  --sync-icon-background-color: var(--vs-panel);
+  --sync-icon-selected-background-color: var(--vs-select);
+  --sync-icon-color: #858585;
+  --sync-icon-selected-color: #ffffff;
+
+  --toc-background-color: #252526;
+  --toc-border-color: var(--vs-border);
+  --toc-header-color: #569cd6;
+
+  /* search */
+  --search-background-color: #3c3c3c;
+  --search-foreground-color: #cccccc;
+  --search-active-color: #ffffff;
+  --search-filter-background-color: #252526;
+  --search-filter-foreground-color: #cccccc;
+  --search-filter-backdrop-filter: none;
+  --search-filter-border-color: var(--vs-border);
+  --search-filter-highlight-text-color: #ffffff;
+  --search-filter-highlight-bg-color: #094771;
+  --search-results-background-color: #252526;
+  --search-results-foreground-color: #cccccc;
+  --search-results-backdrop-filter: none;
+  --search-results-border-color: var(--vs-border);
+  --search-box-border-color: var(--vs-border);
+  --search-close-icon-bg-color: #858585;
+  --search-close-icon-fg-color: #1e1e1e;
+
+  /* code: Visual Studio Dark syntax colours */
+  --code-keyword-color: #569cd6;
+  --code-type-keyword-color: #4ec9b0;
+  --code-flow-keyword-color: #c586c0;
+  --code-comment-color: #57a64a;
+  --code-preprocessor-color: #9b9b9b;
+  --code-string-literal-color: #d69d85;
+  --code-char-literal-color: #d69d85;
+  --code-xml-cdata-color: #d4d4d4;
+  --code-vhdl-digit-color: #b5cea8;
+  --code-vhdl-char-color: #d69d85;
+  --code-vhdl-keyword-color: #569cd6;
+  --code-vhdl-logic-color: #d16969;
+  --code-link-color: #4ec9b0;
+  --code-external-link-color: #3794ff;
+  --fragment-foreground-color: #d4d4d4;
+  --fragment-background-color: #1e1e1e;
+  --fragment-border-color: var(--vs-border);
+  --fragment-lineno-border-color: var(--vs-border);
+  --fragment-lineno-background-color: #1e1e1e;
+  --fragment-lineno-foreground-color: #2b91af;
+  --fragment-lineno-link-fg-color: #2b91af;
+  --fragment-lineno-link-bg-color: #2a2d2e;
+  --fragment-lineno-link-hover-fg-color: #ffffff;
+  --fragment-lineno-link-hover-bg-color: #37373d;
+  --fragment-copy-ok-color: #4ec9b0;
+  --fragment-highlight-filter: 5;
+  --tooltip-foreground-color: #cccccc;
+  --tooltip-background-color: #252526;
+  --tooltip-arrow-background-color: #252526;
+  --tooltip-backdrop-filter: none;
+  --tooltip-border-color: var(--vs-border);
+  --tooltip-doc-color: #d4d4d4;
+  --tooltip-declaration-color: #dcdcaa;
+  --tooltip-link-color: #4ec9b0;
+  --tooltip-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --fold-line-color: #606060;
+
+  /* fonts */
+  --font-family-normal: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Roboto, sans-serif;
+  --font-family-monospace: Consolas, "Cascadia Mono", "Cascadia Code", Menlo, "DejaVu Sans Mono", monospace;
+  --font-family-nav: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-family-title: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-family-toc: "Segoe UI", system-ui, sans-serif;
+  --font-family-search: "Segoe UI", system-ui, sans-serif;
+  --font-family-tooltip: "Segoe UI", system-ui, sans-serif;
+
+  /* callouts */
+  --warning-color-bg: #3a1d1d;
+  --warning-color-hl: #f14c4c;
+  --warning-color-text: #f5b1aa;
+  --note-color-bg: #2b2b1d;
+  --note-color-hl: #cca700;
+  --note-color-text: #e2d5a0;
+  --todo-color-bg: #112a3f;
+  --todo-color-hl: #3794ff;
+  --todo-color-text: #cfe8ff;
+  --test-color-bg: #1d1d3a;
+  --test-color-hl: #7a7aff;
+  --test-color-text: #cfcfee;
+  --deprecated-color-bg: #2d2d30;
+  --deprecated-color-hl: #858585;
+  --deprecated-color-text: #b8b8b8;
+  --bug-color-bg: #2a2236;
+  --bug-color-hl: #b180d7;
+  --bug-color-text: #d5b9ee;
+  --invariant-color-bg: #1f2d25;
+  --invariant-color-hl: #4ec9b0;
+  --invariant-color-text: #cceed5;
+}
+
+/* ---- 2. Base ----------------------------------------------------------- */
+html, body { background: var(--vs-editor); }
+body, table, div, p, dl { font-size: 13px; line-height: 20px; }
+
+::selection { background: #264f78; color: #fff; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.el, a.elRef, a.code, a.codeRef { font-weight: 500; }
+
+h1, h2, h3, h4, h5, h6 { color: #ffffff; font-weight: 600; }
+h2.groupheader {
+  color: #569cd6;
+  border-bottom: 1px solid var(--vs-border);
+  font-size: 15px;
+  letter-spacing: 0;
+  margin-top: 28px;
+}
+
+code, .tt, tt, kbd, samp, div.fragment, pre.fragment,
+span.keyword, span.keywordtype, span.keywordflow, span.comment,
+span.preprocessor, span.stringliteral, span.charliteral, div.line,
+.memname, .memproto, td.memItemRight, td.memItemLeft {
+  font-family: var(--font-family-monospace);
+}
+code, .tt {
+  background: #2d2d30;
+  border: 1px solid var(--vs-border-soft);
+  border-radius: 3px;
+  padding: 0 4px;
+  color: #ce9178;
+  font-size: 12px;
+}
+
+/* scrollbars like VS */
+* { scrollbar-color: #424242 var(--vs-editor); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-track { background: var(--vs-editor); }
+::-webkit-scrollbar-thumb { background: #424242; border: 3px solid var(--vs-editor); border-radius: 7px; }
+::-webkit-scrollbar-thumb:hover { background: #686868; }
+
+/* ---- 3. Title bar (VS title bar + project) ----------------------------- */
+#titlearea {
+  background: linear-gradient(90deg, var(--vs-purple), #3a1a52 55%, var(--vs-tab-bar));
+  border-bottom: 1px solid #000;
+  padding: 0 12px;
+}
+#titlearea table { height: 46px; }
+#projectlogo img { height: 30px; width: auto; margin: 0 10px 0 0; border-radius: 3px; }
+#projectname {
+  font-size: 15px !important;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: .2px;
+}
+#projectname::after {
+  content: "  \2022  API Reference";
+  font-weight: 400;
+  color: rgba(255, 255, 255, .65);
+}
+#projectbrief, #projectnumber { color: rgba(255, 255, 255, .7); }
+
+/* ---- 4. Menu bar ------------------------------------------------------- */
+#main-nav { background: var(--vs-tab-bar); border-bottom: 1px solid var(--vs-border); }
+.sm-dox { background: var(--vs-tab-bar) !important; box-shadow: none; border: 0; }
+.sm-dox > li > a { color: #cccccc; font-size: 13px; }
+.sm-dox a:hover, .sm-dox a.highlighted { background: #3e3e42 !important; color: #fff; border-radius: 0 !important; }
+.sm-dox ul {
+  background: #1f1f1f !important;
+  border: 1px solid var(--vs-border) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .55) !important;
+}
+.sm-dox ul a { color: #cccccc !important; }
+.sm-dox ul a:hover { background: #094771 !important; color: #fff !important; border-radius: 0 !important; }
+.sm-dox > li > ul:before, .sm-dox > li > ul:after { display: none !important; }
+
+/* search box */
+#MSearchBox {
+  background: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  border-radius: 2px;
+  box-shadow: none;
+}
+#MSearchBox:focus-within { border-color: var(--vs-accent); }
+#MSearchField { color: #cccccc; background: transparent; font-family: var(--font-family-normal); }
+#MSearchSelectWindow, #MSearchResultsWindow {
+  background: #252526;
+  border: 1px solid var(--vs-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .55);
+  border-radius: 0;
+}
+.SRPage .SREntry, .SRSymbol, a.SRSymbol { font-family: var(--font-family-normal); }
+a.SRSymbol:hover, a.SRScope:hover { background: #094771; }
+
+/* ---- 5. Solution Explorer (left tree) ---------------------------------- */
+#side-nav { background: var(--vs-panel); border-right: 1px solid #000; }
+#nav-tree { background: var(--vs-panel); }
+#nav-tree::before {
+  content: "Solution Explorer";
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--vs-tab-bar);
+  border-bottom: 1px solid var(--vs-border);
+  border-top: 2px solid var(--vs-accent);
+}
+#nav-tree a { color: #cccccc; font-size: 13px; }
+#nav-tree a:hover { color: #fff; text-decoration: none; }
+#nav-tree .item { transition: none; }
+#nav-tree .item:hover { background: var(--vs-hover); }
+#nav-tree .selected { background: #094771; text-shadow: none; }
+#nav-tree .selected a { color: #ffffff; }
+#nav-tree .arrow { color: #858585; }
+#nav-tree .label { font-size: 13px; }
+#nav-tree .children_ul { border-left: 1px solid #3a3a3d; margin-left: 8px; }
+#splitbar { background: #333337; }
+#splitbar:hover { background: var(--vs-accent); }
+
+/* ---- 6. Document tab + content ---------------------------------------- */
+div.header {
+  background: var(--vs-tab-bar);
+  border-bottom: 1px solid var(--vs-border);
+  background-image: none;
+  padding: 0;
+}
+div.headertitle { padding: 0 24px; }
+div.headertitle .title {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 18px 8px 14px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+  background: var(--vs-editor);
+  border-top: 2px solid var(--vs-accent);
+  border-right: 1px solid var(--vs-border);
+  border-left: 1px solid var(--vs-border);
+}
+div.summary { background: var(--vs-panel); border-bottom: 1px solid var(--vs-border-soft); padding: 4px 24px; }
+div.summary a { color: #9cdcfe; }
+div.contents { margin: 0; padding: 18px 28px 40px; max-width: 1280px; }
+div.contents > .textblock, div.textblock { font-size: 13.5px; }
+
+/* member tables */
+table.memberdecls { border-collapse: separate; border-spacing: 0; }
+tr.heading h2 { color: #569cd6; border-bottom: 1px solid var(--vs-border); }
+tr[class^="memitem"], tr[class*=" memitem"] { background: transparent; }
+td.memItemLeft, td.memItemRight, td.memTemplParams, td.mdescLeft, td.mdescRight {
+  background: #252526;
+  border-color: var(--vs-border-soft);
+}
+td.memItemLeft { color: #4ec9b0; }
+td.memItemRight a.el { color: #dcdcaa; }
+tr.separator\: , tr[class^="separator"] { height: 4px; }
+
+.memitem {
+  background: var(--vs-editor);
+  border: 1px solid var(--vs-border);
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 22px;
+}
+.memitem.glow { box-shadow: 0 0 0 1px var(--vs-accent); }
+.memtitle {
+  background: #2d2d30;
+  border: 1px solid var(--vs-border);
+  border-bottom: 0;
+  border-radius: 0;
+  color: #ffffff;
+  text-shadow: none;
+  padding: 6px 10px;
+}
+.memproto, dl.reflist dt {
+  background: #252526;
+  border: 0;
+  border-bottom: 1px solid var(--vs-border);
+  border-left: 3px solid var(--vs-accent);
+  box-shadow: none;
+  text-shadow: none;
+  color: #dcdcaa;
+  padding: 8px 12px;
+}
+.memproto table { background: transparent; }
+td.memname, .memname { color: #dcdcaa; font-weight: 600; }
+td.paramtype { color: #4ec9b0; }
+td.paramname, .paramname { color: #9cdcfe; font-style: normal; }
+.memdoc, dl.reflist dd { background: var(--vs-editor); border: 0; box-shadow: none; padding: 10px 14px; }
+.memdoc dl.params dt, dl.section dt, dl.params dt { color: #569cd6; font-weight: 600; }
+table.params td.paramname { color: #9cdcfe; }
+table.fieldtable, table.params, table.exception, table.tparams {
+  background: #252526;
+  border: 1px solid var(--vs-border);
+}
+table.fieldtable th, table.doxtable th, th.markdownTableHeadLeft, th.markdownTableHeadRight, th.markdownTableHeadCenter, th.markdownTableHeadNone {
+  background: #2d2d30;
+  color: #ffffff;
+  border: 1px solid var(--vs-border);
+}
+table.doxtable td, table.markdownTable td, table.fieldtable td { border: 1px solid var(--vs-border); }
+table.markdownTable tr:nth-child(even) { background: #232325; }
+span.mlabel, .mlabel {
+  background: #0e639c;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 10.5px;
+  padding: 1px 6px;
+}
+
+/* directory / index tables = Solution tree rows */
+table.directory { border-top: 1px solid var(--vs-border); }
+table.directory tr.even { background: var(--vs-editor); }
+table.directory tr.odd { background: #232325; }
+table.directory tr:hover { background: var(--vs-hover); }
+table.directory td { border-color: var(--vs-border-soft); }
+table.directory td.entry { color: #4ec9b0; }
+table.directory td.desc { color: var(--vs-text-dim); }
+
+/* ---- 7. Code fragments (editor look) ----------------------------------- */
+div.fragment, pre.fragment {
+  background: #1e1e1e;
+  border: 1px solid var(--vs-border);
+  border-left: 3px solid var(--vs-accent);
+  border-radius: 0;
+  padding: 8px 10px 8px 8px;
+  font-size: 12.5px;
+  color: #d4d4d4;
+}
+div.line { color: #d4d4d4; line-height: 1.45; }
+div.line:hover, div.line.glow { background: #2a2d2e; }
+span.lineno { background: #1e1e1e; border-right: 1px solid var(--vs-border); color: #2b91af; }
+span.lineno a { color: #2b91af; background: transparent; }
+span.keyword { color: #569cd6; }
+span.keywordtype { color: #4ec9b0; }
+span.keywordflow { color: #c586c0; }
+span.comment { color: #57a64a; }
+span.preprocessor { color: #9b9b9b; }
+span.stringliteral, span.charliteral { color: #d69d85; }
+div.fragment a.code, div.fragment a.codeRef { color: #4ec9b0; }
+div.fragment a.code:hover { text-decoration: underline; }
+
+/* ---- 8. Callouts, blockquotes, toc ------------------------------------- */
+blockquote { border-left: 3px solid var(--vs-accent); background: #252526; color: #cccccc; border-radius: 0; }
+dl.warning, dl.attention, dl.note, dl.todo, dl.bug, dl.deprecated, dl.remark {
+  border-radius: 0;
+  border-left-width: 3px;
+}
+div.toc { background: #252526; border: 1px solid var(--vs-border); border-radius: 0; box-shadow: none; }
+div.toc h3 { color: #569cd6; }
+div.toc li a { color: #cccccc; }
+div.toc li a:hover { color: #fff; }
+
+/* class / collaboration graphs: white-on-transparent SVG/PNG sit on a light card */
+div.dotgraph, div.center img, .inherit_header + .inherit img, div.image {
+  text-align: center;
+}
+img[src$=".png"]:not([src*="og-image"]):not(.footer), object[type="image/svg+xml"] {
+  background: #f3f3f3;
+  border: 1px solid var(--vs-border);
+  border-radius: 2px;
+  padding: 6px;
+}
+
+/* tooltips */
+div.ttc { background: #252526; border: 1px solid var(--vs-border); box-shadow: 0 4px 12px rgba(0, 0, 0, .55); border-radius: 0; }
+
+/* ---- 9. Status bar (footer / breadcrumb) ------------------------------- */
+#nav-path { background: var(--vs-accent); border-top: 1px solid #0b4f7c; }
+#nav-path ul { background: var(--vs-accent); border: 0; color: #ffffff; }
+#nav-path li.navelem a, #nav-path li.navelem { color: #ffffff; }
+#nav-path li.navelem:hover { background: #1c97ea; }
+#nav-path li.navelem:after { border-color: transparent; }
+#nav-path li.footer { color: #ffffff; font-size: 11px; opacity: .9; }
+#nav-path li.footer a { color: #ffffff; }
+#nav-path li.footer img { filter: brightness(0) invert(1); }
+
+/* ---- 10. Landing page cards (index.html) ------------------------------- */
+.vs-hero { border-bottom: 1px solid var(--vs-border); padding: 4px 0 22px; margin-bottom: 22px; }
+.vs-hero h1 { font-size: 26px; font-weight: 300; margin: 0 0 6px; color: #fff; }
+.vs-hero h1 b { font-weight: 600; color: #75beff; }
+.vs-hero p { max-width: 70ch; color: #cccccc; font-size: 14px; margin: 6px 0; }
+.vs-badges span {
+  display: inline-block; margin: 8px 6px 0 0; padding: 1px 9px;
+  background: #094771; color: #fff; border-radius: 2px; font: 11.5px/20px var(--font-family-monospace);
+}
+.vs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 14px 0 26px; }
+.vs-card {
+  background: #252526; border: 1px solid var(--vs-border); border-top: 2px solid var(--vs-accent);
+  padding: 12px 14px 12px; border-radius: 0;
+}
+.vs-card:hover { background: #2a2d2e; border-top-color: #4ec9b0; }
+.vs-card h3 { margin: 0 0 4px; font-size: 14px; color: #fff; }
+.vs-card h3 a { color: #4ec9b0; }
+.vs-card .vs-ns { font: 11.5px/18px var(--font-family-monospace); color: #9cdcfe; margin-bottom: 6px; }
+.vs-card p { margin: 0; color: #bdbdbd; font-size: 12.5px; line-height: 19px; }
+.vs-quick a {
+  display: inline-block; margin: 0 8px 8px 0; padding: 5px 14px; background: #0e639c; color: #fff;
+  border: 1px solid #1177bb; border-radius: 2px; font-size: 12.5px;
+}
+.vs-quick a:hover { background: #1177bb; text-decoration: none; }
+.vs-flow {
+  font: 12.5px/20px var(--font-family-monospace); background: #1e1e1e; border: 1px solid var(--vs-border);
+  border-left: 3px solid var(--vs-accent); padding: 10px 14px; color: #d4d4d4; overflow-x: auto; white-space: pre;
+}
+.vs-flow .k { color: #569cd6; } .vs-flow .t { color: #4ec9b0; } .vs-flow .c { color: #57a64a; }
+
+@media (max-width: 767px) {
+  div.contents { padding: 12px 14px 30px; }
+  #projectname::after { content: ""; }
+}
+
+/* ---- 11. "On this page" outline (right panel) -------------------------- */
+#page-nav { background: var(--vs-panel); border-left: 1px solid var(--vs-border); }
+#page-nav li, #page-nav li.vis { background: transparent; border-left: 2px solid transparent; }
+#page-nav li.vis { background: #2a2d2e; border-left-color: var(--vs-accent); }
+#page-nav li.vis a, #page-nav li a:hover { color: #ffffff; }
+#page-nav li a { color: #cccccc; }
+#page-nav-resize-handle { background: #333337; }

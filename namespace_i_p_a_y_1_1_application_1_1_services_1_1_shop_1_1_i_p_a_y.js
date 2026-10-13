@@ -1,0 +1,4 @@
+var namespace_i_p_a_y_1_1_application_1_1_services_1_1_shop_1_1_i_p_a_y =
+[
+    [ "Application", "namespace_i_p_a_y_1_1_application_1_1_services_1_1_shop_1_1_i_p_a_y_1_1_application.html", "namespace_i_p_a_y_1_1_application_1_1_services_1_1_shop_1_1_i_p_a_y_1_1_application" ]
+];
